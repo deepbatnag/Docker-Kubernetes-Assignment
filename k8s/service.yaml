@@ -9,4 +9,4 @@ spec:
   ports:
   - port: 8001
     targetPort: 8001
-    nodePort: 8002
+    nodePort: 30001
