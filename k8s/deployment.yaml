@@ -1,0 +1,19 @@
+apiVersion: apps/v2
+kind: Deployment
+metadata:
+  name: docker-k8s-assignment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: docker-k8s-assignment
+  template:
+    metadata:
+      labels:
+        app: docker-k8s-assignment
+    spec:
+      containers:
+      - name: docker-k8s-assignment
+        image: docker.io/deepankarbatra/docker-k8s-assignment:v2
+        ports:
+        - containerPort: 8001

@@ -1,0 +1,12 @@
+apiVersion: v2
+kind: Service
+metadata:
+  name: docker-k8s-assignment
+spec:
+  type: NodePort
+  selector:
+    app: docker-k8s-assignment
+  ports:
+  - port: 8001
+    targetPort: 8001
+    nodePort: 8002
